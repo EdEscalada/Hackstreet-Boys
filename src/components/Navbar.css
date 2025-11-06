@@ -1,0 +1,49 @@
+
+
+.nav-strip-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px; /* visible hover area */
+  z-index: 1001;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, #1e273f, #0f1724);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  box-shadow: 0 2px 4px rgba(18, 16, 48, 0.08);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  will-change: transform;
+  z-index: 1001;
+}
+
+
+
+/* A small visible hint bar so users can discover the hover area */
+.nav-strip-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  margin: 2px 0;
+  background: rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+  pointer-events: none;
+  border-radius: 0 0 4px 4px;
+}
+
+@media (max-width: 600px) {
+  .nav { padding: 10px; }
+  .nav-strip-container { height: 10px; }
+  .nav { transform: translateY(calc(-100% + 10px)); }
+}

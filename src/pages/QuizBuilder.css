@@ -1,0 +1,73 @@
+.quiz-builder {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 80vw;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 125px); /* shifts it right by half of the TOC width */
+  transform: translate(-50%, -50%);
+}
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+
+.back-button {
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: white;
+  color: #1e273f;
+  transition: background 0.2s;
+}
+
+.back-button:hover {
+  background: #1e273f;
+  color: white;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  height: 100%;
+}
+
+.content-area {
+  display: flex;
+  gap: 20px; 
+  padding: 10px;
+  box-sizing: border-box;
+  flex:1;
+}
+
+.problem-section {
+  min-width: 0;
+  overflow: hidden;
+  flex:3;
+}
+
+.pdf-container.pdf-placeholder {
+  background: #f9f9f9;
+}
+
+
+.code-container {
+  flex-direction: column;     
+  height: 100%;  
+
+}
+
+.code-editor-wrapper{
+  overflow: hidden;     
+  flex: 3;
+  height: 100%;  
+  margin-top: 30px;
+  border: 1px solid #ddd;
+}
